@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* ==========================================================================
+   PURE MINIMALIST LIGHT THEME (APPLE-STYLE)
+   ========================================================================== */
+
+:root {
+  --bg-color: #fbfbfd;
+  --surface-color: #ffffff;
+  --border-subtle: rgba(0, 0, 0, 0.05);
+  
+  --text-primary: #1d1d1f;
+  --text-secondary: #86868b;
+  --text-tertiary: #a1a1a6;
+
+  --accent-primary: #0066cc;
+  --accent-hover: #005bb5;
+  
+  --radius-lg: 24px;
+  --radius-md: 18px;
+  --radius-sm: 12px;
+  --radius-pill: 9999px;
+  
+  --shadow-soft: 0 4px 24px rgba(0, 0, 0, 0.04);
+  --shadow-hover: 0 10px 40px rgba(0, 0, 0, 0.08);
+
+  --font-display: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  background-color: var(--bg-color) !important;
+  color: var(--text-secondary) !important;
+  font-family: var(--font-display) !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --------------------------------------
+   TYPOGRAPHY
+   -------------------------------------- */
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .display-1, .display-2, .display-3, .display-4, .display-5 {
+  color: var(--text-primary) !important;
+  font-family: var(--font-display) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.03em !important;
+}
+
+.text-white { color: var(--text-primary) !important; }
+.text-primary { color: var(--accent-primary) !important; }
+
+/* --------------------------------------
+   NAVBAR & HEADER
+   -------------------------------------- */
+.navbar {
+  background-color: rgba(251, 251, 253, 0.8) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-subtle);
+  box-shadow: none !important;
+  transition: all 0.3s ease;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link.active {
+  color: var(--text-primary);
+}
+
+.bg-primary {
+  background-color: transparent !important;
+}
+
+.header-bg {
+  min-height: 100vh;
+  padding-top: 120px !important;
+  background-color: var(--bg-color) !important;
+}
+
+.hero-img {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.hero-img:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* --------------------------------------
+   BUTTONS
+   -------------------------------------- */
+.btn-modern {
+  background: var(--text-primary);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-soft);
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none !important;
+}
+
+.btn-modern:hover {
+  background: #333336;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.btn-modern-outline {
+  background: var(--surface-color);
+  color: var(--text-primary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-pill);
+  padding: 0.75rem 2rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-soft);
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none !important;
+}
+
+.btn-modern-outline:hover {
+  border-color: #d2d2d7;
+  color: var(--text-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* --------------------------------------
+   CARDS & UTILITIES
+   -------------------------------------- */
+.minimal-card {
+  background-color: var(--surface-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  padding: 24px;
+  border: 1px solid var(--border-subtle);
+  transition: all 0.3s ease;
+  color: var(--text-primary);
+}
+
+.minimal-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Skills Grid */
+.skill-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.skill-pill {
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-pill);
+  padding: 10px 24px;
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 0.95rem;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.skill-pill:hover {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Timeline Cleanup */
+.border-primary { border-color: var(--border-subtle) !important; }
+.fa-dot-circle { color: var(--accent-primary) !important; }
+.text-secondary { color: var(--text-secondary) !important; }
+
+/* Remove ugly strokes */
+.display-1 { opacity: 0.04 !important; }
+h1[style*="-webkit-text-stroke"] {
+  -webkit-text-stroke: 0 !important;
+}
+.display-3[style*="-webkit-text-stroke"] {
+  -webkit-text-stroke: 0 !important;
+}
