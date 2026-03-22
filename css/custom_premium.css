@@ -5,24 +5,24 @@
    ========================================================================== */
 
 :root {
-  --bg-color: #fbfbfd;
-  --surface-color: #ffffff;
-  --border-subtle: rgba(0, 0, 0, 0.05);
+  --bg-color: #000000; /* Pure black for modern OLED screens */
+  --surface-color: #111113; /* Deep gray for cards */
+  --border-subtle: rgba(255, 255, 255, 0.08); /* Faint white borders */
   
-  --text-primary: #1d1d1f;
-  --text-secondary: #86868b;
-  --text-tertiary: #a1a1a6;
+  --text-primary: #f5f5f7; /* Off-white primary text */
+  --text-secondary: #a1a1a6; /* Premium dark-mode gray */
+  --text-tertiary: #86868b;
 
-  --accent-primary: #0066cc;
-  --accent-hover: #005bb5;
+  --accent-primary: #2997ff; /* Signature tech blue */
+  --accent-hover: #147ce5;
   
   --radius-lg: 24px;
   --radius-md: 18px;
   --radius-sm: 12px;
   --radius-pill: 9999px;
   
-  --shadow-soft: 0 4px 24px rgba(0, 0, 0, 0.04);
-  --shadow-hover: 0 10px 40px rgba(0, 0, 0, 0.08);
+  --shadow-soft: 0 4px 24px rgba(0, 0, 0, 0.4);
+  --shadow-hover: 0 10px 40px rgba(0, 0, 0, 0.6);
 
   --font-display: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
@@ -51,7 +51,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .display-1, .display-2, .d
    NAVBAR & HEADER
    -------------------------------------- */
 .navbar {
-  background-color: rgba(251, 251, 253, 0.8) !important;
+  background-color: rgba(0, 0, 0, 0.75) !important; /* Dark Frosted Glass */
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border-subtle);
@@ -104,7 +104,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .display-1, .display-2, .d
    -------------------------------------- */
 .btn-modern {
   background: var(--text-primary);
-  color: #ffffff;
+  color: #000000;
   border: none;
   border-radius: var(--radius-pill);
   padding: 0.75rem 2rem;
@@ -118,8 +118,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .display-1, .display-2, .d
 }
 
 .btn-modern:hover {
-  background: #333336;
-  color: #ffffff;
+  background: #d2d2d7;
+  color: #000000;
   transform: translateY(-2px);
   box-shadow: var(--shadow-hover);
 }
@@ -194,7 +194,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .display-1, .display-2, .d
 
 /* Timeline Cleanup */
 .border-primary { border-color: var(--border-subtle) !important; }
-.fa-dot-circle { color: var(--accent-primary) !important; }
+.fa-dot-circle { color: var(--accent-primary) !important; background: var(--bg-color); border-radius: 50%; }
 .text-secondary { color: var(--text-secondary) !important; }
 
 /* Remove ugly strokes */
@@ -233,11 +233,11 @@ h1[style*="-webkit-text-stroke"] {
 }
 
 .portfolio-item .portfolio-btn {
-  background: rgba(255, 255, 255, 0.6) !important;
+  background: rgba(0, 0, 0, 0.6) !important;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-radius: var(--radius-md);
   margin: 16px;
   box-shadow: var(--shadow-soft);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
