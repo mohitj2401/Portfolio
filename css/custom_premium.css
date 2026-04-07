@@ -180,21 +180,32 @@ h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-3, .display-5 {
   box-shadow: var(--shadow-soft);
 }
 
+.skill-grid {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 1rem !important;
+  padding: 2rem 0;
+}
+
 .skill-pill {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border-subtle);
-  padding: 0.6rem 1.5rem;
+  padding: 0.6rem 1.8rem;
   border-radius: var(--radius-pill);
   font-weight: 500;
   color: var(--text-secondary);
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: default;
+  white-space: nowrap;
 }
 
 .skill-pill:hover {
   background: var(--accent-gradient);
-  color: white;
+  color: white !important;
   border-color: transparent;
-  transform: scale(1.05);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: var(--shadow-glow);
 }
 
 /* --------------------------------------
